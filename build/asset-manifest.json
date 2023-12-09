@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4dde5191.css",
+    "main.js": "/static/js/main.6e2161aa.js",
+    "static/media/logoHSBC.svg": "/static/media/logoHSBC.96d65f5dd5279a15a4658a3a325929f2.svg",
+    "index.html": "/index.html",
+    "main.4dde5191.css.map": "/static/css/main.4dde5191.css.map",
+    "main.6e2161aa.js.map": "/static/js/main.6e2161aa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4dde5191.css",
+    "static/js/main.6e2161aa.js"
+  ]
+}

@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: linear-gradient(rgba(250, 240, 240, 0.1), transparent);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Envía el fondo detrás de todo el contenido */
+}
+header{
+    z-index: 100;
+    background-color: #ffffff;
+    padding: 20px;
+    transition: background-color 0.3s, opacity 0.3s;
+     /* Aplicar un desenfoque al contenido detrás del encabezado */
+
+}
+.scrolled {
+    /* Estilos cuando se ha desplazado la página */
+    z-index: 100;
+    background-color: #ffffff; /* Cambia el color de fondo según tu preferencia */
+    opacity: 0 !important; /* Ajusta la opacidad deseada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: agrega sombra cuando se desplace */
+    opacity: 0; /* Opacidad cero (transparente) */
+    transition: opacity 0.3s; /* Duración de la transición */
+    
+}
+
+main {
+    margin-top: 100px;
+    overflow-y: auto; /* Permitir el desplazamiento vertical */
+    min-height: 94vh; /* Asegurar que el `main` ocupa toda la altura disponible */
+  }
+  
+
+  .overlay-footer {
+      z-index: 10;
+      /* Ajusta el valor de z-index según sea necesario para superponer correctamente otros elementos */
+      /* Agrega otros estilos necesarios aquí */
+      overflow-y: auto;
+      position: relative;
+      bottom: 0;
+      width: auto;
+      
+      
+
+  }
+  
+
+
