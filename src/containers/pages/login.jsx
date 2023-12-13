@@ -52,10 +52,11 @@ function Login() {
                 )} */} 
 
               </div>
-              <div id="forgot">
+              
+            </div>
+            <div id="forgot">
                 <a href="">¿Olvidaste tu contraseña?</a>
               </div>
-            </div>
           </div>
         </div>
       </main>

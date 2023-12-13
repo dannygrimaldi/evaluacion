@@ -104,9 +104,11 @@ button.active {
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      padding-top: 24px;
+      padding-top: 250px;
       margin-top: -300px; 
-      border-top: solid 1px rgba(255,255,255,.3);    
+      /*La siguiente linea se comenta ya que agrega una linea en la parte superior del elemento */
+      /*border-top: solid 1px rgba(255,255,255,.3);    */
+    
   }
 
   /* form styling */
