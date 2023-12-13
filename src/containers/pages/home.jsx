@@ -9,7 +9,7 @@ function Home() {
             <Layout>
                 <main className="flex-grow overflow-auto">
                     <div className="relative max-w-7xl mx-auto z-10">
-                        {/* Contenido principal de tu página de inicio in PC*/}
+                        {/* Contenido principal de tu página de inicio ahora en laptop*/}
                       
                     </div>
                 </main>
