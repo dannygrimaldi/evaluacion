@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
 import { ThemeSwitcher } from '../components/ThemeSwitcher';
 import { UserIcon } from "./UserIcon";
 import { useTheme } from 'next-themes';
+import AuthContext from '../context/AuthContext';
+
 
 
 export default function App() {
   const [selectedColor] = useState("default");
   const variants = ["light"];
   const { theme } = useTheme();
+  const { user } = useContext(AuthContext);
   const textColor = theme === 'dark' ? 'capitalize text-withe' : 'capitalize text-black';
 
   return (
@@ -21,7 +24,7 @@ export default function App() {
               variant={variant}
               className={textColor}
             ><UserIcon className="w-4 mr-1" />
-              45083732
+              {user ? user.username : 'Guest'}
             </Button>
           </DropdownTrigger>
           <DropdownMenu

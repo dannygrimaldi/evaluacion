@@ -37,7 +37,10 @@ Third_apps = [
     'corsheaders',
     'rest_framework',
     'ckeditor',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'rest_framework_simplejwt.token_blacklist',
+    'evacore',
+    
 ]
 INSTALLED_APPS = Django_APPS+Third_apps
 

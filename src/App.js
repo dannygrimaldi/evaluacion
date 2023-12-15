@@ -1,18 +1,24 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Error404 from './containers/errors/error404';
-import Home from './containers/pages/home';
-import Login from './containers/pages/login';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
+import HomePage from './pages/HomePage'
+import LoginPage from './pages/LoginPage'
+import Header from './components/Header'
+import PrivateRoute from './utils/PrivateRoute'
 
 
 function App() {
   return (
-    <Router>
-      <Routes>
-      <Route path="*" element={<Error404/>}/>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/login" element={<Login/>}/>
-      </Routes>
-    </Router>
+    <div className="App">
+        <Router>
+            <AuthProvider>
+                <Header/>
+                <Routes>
+                    <Route path="/" element={<PrivateRoute><HomePage/></PrivateRoute>} />
+                    <Route path="/login" element={<LoginPage/>}/>
+                </Routes>
+            </AuthProvider>
+        </Router>
+    </div>
   );
 }
 
