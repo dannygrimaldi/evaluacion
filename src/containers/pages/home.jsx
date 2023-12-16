@@ -54,13 +54,13 @@ function Home() {
     <div className="item2">
         <div className="flex-list">
             <div className="flex-buscar">
-            <div className="buscar1"><div class="main">
+            <div className="buscar1">
   
   
-  <div class="form-group has-feedback has-search">
-    <span class="glyphicon glyphicon-search form-control-feedback"></span>
-    <input type="text" class="form-control" placeholder="Search">
-  </div>
+            <div classname="form-group has-feedback has-search">
+        <span classname="glyphicon glyphicon-search form-control-feedback" />
+        <input type="text" classname="form-control" placeholder="Search" />
+      
   
 </div> </div>
             <div className="buscar2">BOTON CUALQUIERA</div>
