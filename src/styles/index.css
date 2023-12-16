@@ -275,36 +275,27 @@ button.active {
 
    /* aqui empieza container del contenido de busqueda */
 
-    .flex-buscar {
-        display: -webkit-inline-flex;
-        display: inline-flex;
-        -webkit-flex-direction: row;
-        flex-direction: row;
-        -webkit-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-justify-content: space-between;
-        justify-content: space-between;
-        -webkit-align-content: flex-start;
-        align-content: flex-start;
-        -webkit-align-items: flex-start;
-        align-items: flex-start;
-        }
-    .flex-item:buscar1 {
-        -webkit-order: 0;
-        order: 0;
-        -webkit-flex: 0 1 auto;
-        flex: 0 1 auto;
-        -webkit-align-self: flex-start;
-        align-self: flex-start;
-        }
-    .flex-item:buscar2 {
-        -webkit-order: 0;
-        order: 0;
-        -webkit-flex: 0 1 auto;
-        flex: 0 1 auto;
-        -webkit-align-self: flex-start;
-        align-self: flex-start;
-        }
+   .flex-buscar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .flex-item-buscar1 {
+    order: 0;
+    flex-grow: 2;
+    flex-shrink: 1;
+    align-self: flex-start;
+  }
+  
+  .flex-item-buscar2 {
+    order: 1; /* Cambiado para que aparezca en el lado derecho */
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: flex-end; /* Cambiado para alinearse en la parte inferior */
+  }
 
            /* aqui acaba container del contenido de busqueda */
 

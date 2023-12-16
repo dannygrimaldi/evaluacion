@@ -13,6 +13,16 @@ function Home() {
             <Header />
             <Layout>
 
+            <div class="dark dark:bg-gray-800 dark:text-white bg-white text-black">
+  ...
+  <div>Text color changes based on theme</div>
+</div>
+
+<div class="light light:bg-gray-100 light:text-black bg-black text-white">
+  ...
+  <div>Text color changes based on theme</div>
+</div>
+
             <Navbar isBordered>
       <NavbarContent justify="start">
         <NavbarBrand className="mr-4">
@@ -121,7 +131,7 @@ function Home() {
   <div className="item2">
       <div className="flex-list">
           <div className="flex-buscar">
-          <div className="buscar1">
+          <div className="flex-item-buscar1">
 
 
           <Input
@@ -131,12 +141,12 @@ function Home() {
             input: "text-small",
             inputWrapper: "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
           }}
-          placeholder="Type to search..."
+          placeholder="Type to searcaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah.................."
           size="sm"
           startContent={<SearchIcon size={18} />}
           type="search"
         /> </div>
-          <div className="buscar2">a</div>
+          <div className="flex-item-buscar2">a</div>
 
 
 
