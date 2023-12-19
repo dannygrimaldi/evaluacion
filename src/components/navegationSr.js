@@ -22,7 +22,7 @@ export function initializeNavbar(toggleId, navId, bodyId, headerId) {
 
     showNavbar();
 
-    /*===== ENLACE ACTIVO =====*/
+    /*===== ENLACE ACTIVO c =====*/
     const linkColor = document.querySelectorAll('.nav_link');
 
     function colorLink() {
