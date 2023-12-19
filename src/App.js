@@ -4,6 +4,7 @@ import Home from './containers/pages/home';
 import Login from './containers/pages/login';
 import SidebarMenu from './containers/pages/Navegation';
 import './containers/pages/Navegation';
+import MyComponent from "./components/navegationSr";
 
 
 
@@ -14,7 +15,7 @@ function App() {
       <Route path="*" element={<Error404/>}/>
       <Route path="/" element={<Home/>}/>
       <Route path="/login" element={<Login/>}/>
-      <Route path="/Navegation" element={<SidebarMenu/>}/>
+      <Route path="/navegationSr" element={<MyComponent/>}/>
       </Routes>
     </Router>
   );
