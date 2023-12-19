@@ -22,7 +22,6 @@ function Home() {
   ...
   <div>Text color changes based on theme</div>
 </div>
-
             <Navbar isBordered>
       <NavbarContent justify="start">
         <NavbarBrand className="mr-4">

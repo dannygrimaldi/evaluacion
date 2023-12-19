@@ -1,8 +1,26 @@
-import Header from '../../components/header.js';
+import React from 'react';
+import EventMenu from '../../components/navegationSr.js';
+import '../../styles/estilospro.css';
+import ReactDOM from 'react-dom';
+import 'jquery/dist/jquery.min.js'; // Importa jQuery
 
-function SidebarMenu() {
-    return(
-<>
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { initializeNavbar } from '..\components\navegationSr.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeNavbar('header-toggle', 'nav-bar', 'body-pd', 'header');
+});
+
+
+
+
+function SidebarMenu (){
+  // Usa la función importada
+  EventMenu();
+
+  
+  return ( 
+    <>
   <header className="header" id="header">
     <div className="header_toggle">
       {" "}
@@ -67,14 +85,13 @@ function SidebarMenu() {
   <div className="height-100 bg-light">
     <h4>Main Components</h4>
   </div>
+  {/*Container Main end*/}
 </>
-    );
+
+  );
 }
-export default function Gerente (){
-    return (
-        <>
-        <SidebarMenu/>
-        </>
-        
-    );
-}
+
+export default SidebarMenu;
+
+
+
