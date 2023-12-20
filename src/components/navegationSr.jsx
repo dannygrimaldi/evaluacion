@@ -15,16 +15,17 @@ const MyComponent = () => {
 
   return (
     <>
-      <header className="header" id="header">
+    <body classname="snippet-body" id="body-pd" class={`${isNavbarVisible ? 'body-pd ' : ''}`} >
+      <header className={`header ${isNavbarVisible ? 'body-pd' : ''}`} id="header">
         <div className="header_toggle" onClick={toggleNavbar}>
                 
-                <i className={`bx-menu ${isNavbarVisible ? 'bx bx-x bx-menu body-pd' : 'bx'}`} id="header-toggle" />
+                <i className={`bx bx-menu ${isNavbarVisible ? ' bx-x' : ''}`} id="header-toggle" />
         </div>
         <div className="header_img">
           <img src="https://i.imgur.com/hczKIze.jpg" alt="" />
         </div>
       </header>
-      <div className={`l-navbar ${isNavbarVisible ? 'show' : ''}`} id="nav-bar">
+      <div className={`l-navbar ${isNavbarVisible ? 'show' : ''}`} id="nav-bar" > 
         <nav className="nav">
           <div>
             <a href="#" className="nav_logo">
@@ -67,7 +68,9 @@ const MyComponent = () => {
       {/* Container Main start */}
       <div className="height-100 bg-light">
         <h4>Main Components</h4>
+        
       </div>
+      </body>
     </>
   );
 };
