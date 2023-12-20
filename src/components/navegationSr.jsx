@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import '../styles/estilospro.css';
+import '../styles/Sidebar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'jquery/dist/jquery.min.js'; // Importa jQuery
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import $ from 'jquery';
 
-const MyComponent = () => {
+const NavegationSr = () => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
 
   const toggleNavbar = () => {
@@ -75,4 +75,4 @@ const MyComponent = () => {
   );
 };
 
-export default MyComponent;
+export default NavegationSr;

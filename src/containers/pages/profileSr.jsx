@@ -3,18 +3,19 @@ import MyComponent from '../../components/navegationSr.jsx';
 import '../../styles/Sidebar.css';
 import 'jquery/dist/jquery.min.js'; // Importa jQuery
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import NavegationSr from '../../components/navegationSr.jsx';
 
-function SidebarMenu() {
+function ProfileSr() {
     
    
   return ( 
     <>
-    <MyComponent/>
+    <NavegationSr/>
     </>
   );
 }
 
-export default SidebarMenu;
+export default ProfileSr;
 
 
 
