@@ -11,6 +11,7 @@ function SidebarMenu() {
     <>
     <MyComponent/>
     </>
+    
   );
 }
 
