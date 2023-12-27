@@ -28,9 +28,9 @@ function Logo(props) {
       className={`h-8 w-auto transition-transform transform hover:scale-125`}
     >
       <style type="text/css"> 
-        {theme === 'dark'
-          ? '.st0{fill:#FFFFFF;}.st1{fill:#DB0011;}.st2{fill:#FFFFFF;}'
-          : '.st1{fill:#FFFFFF;}.st0{fill:#FFFFFF;}.st2{fill:#DB0011;}'}
+        {
+          '.st0{fill:#FFFFFF;}.st1{fill:#af1919;}.st2{fill:#FFFFFF;}'
+          }
       </style>
       <g>
         <path className="st0" d="M92.3,20.1h-6.7v6.6h-3.4V11.2h3.4v6.3h6.7v-6.3h3.4v15.5h-3.4V20.1z" />

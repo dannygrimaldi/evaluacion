@@ -1,0 +1,114 @@
+
+.todo-input {
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px 0;
+    border: 2px solid #da32b0;
+  } 
+
+  .content-addjunior{
+    align-items:end;
+  }
+
+
+
+.button-styled {
+    position: relative;
+    top: 130px;
+    left: 130px;
+    padding: 0 17px;
+    transform: translateX(-50%);
+    height: 50px;
+    border-radius: 100px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2bdfff;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .button-styled:hover:before,
+  .button-styled:hover:after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+  }
+  
+  .button-styled:hover label {
+    width: 75px;
+    opacity: 0.8;
+    margin-left: 8px;
+  }
+  
+  .button-styled:before,
+  .button-styled:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 100px;
+    background-color: #44b9dd;
+    opacity: 0;
+    transition: all 0.4s ease;
+    transition-delay: 0.1s;
+    z-index: 0;
+  }
+  
+  .button-styled:after {
+    transition-delay: 0.3s;
+  }
+  
+  .button-styled span {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .button-styled label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 0;
+    white-space: nowrap;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 1;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    transition: all 0.4s ease;
+    pointer-events: none;
+  }
+
+
+
+
+  
+
+  .todo-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .todo-table th, 
+  .todo-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .todo-table input {
+    width: 100%;
+    box-sizing: border-box;
+  }

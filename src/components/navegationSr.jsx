@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import '../styles/estilospro.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/Sidebar.css';
+import '../styles/add.css';
 import 'jquery/dist/jquery.min.js'; // Importa jQuery
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import $ from 'jquery';
+import Logo2 from './logo2';
+import TodoList2 from './PRUEBAS';
 
 const MyComponent = () => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
@@ -29,8 +28,8 @@ const MyComponent = () => {
         <nav className="nav">
           <div>
             <a href="#" className="nav_logo">
-              <i className="bx bx-layer nav_logo-icon" />
-              <span className="nav_logo-name">BBBootstrap</span>
+              <i className="bx  nav_logo-icon" /><Logo2/>
+              <span className="nav_logo-name"></span>
             </a>
             <div className="nav_list">
               <a href="#" className="nav_link active">
@@ -66,8 +65,8 @@ const MyComponent = () => {
         </nav>
       </div>
       {/* Container Main start */}
-      <div className="height-100 bg-light">
-        <h4>Main Components</h4>
+      <div className="height-50 bg-light">
+        <h4><TodoList2/></h4>
         
       </div>
       </body>
