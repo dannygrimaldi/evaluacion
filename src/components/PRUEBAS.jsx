@@ -32,21 +32,14 @@ const TodoList2 = () => {
       
       
        <h2>Agregar asesor</h2>
-       <button className="button-styled" onClick={addTodo}>
-              <span>+</span>
-              <label htmlFor="">Agregar</label>
-            </button>
+            
       <table className="todo-table">
         <thead>
           <tr>
             {[...Array(3)].map((_, i) => (
               <th key={i}>Column {i + 1}</th>
             ))}
-            <th>Actions</th>
-
-          </tr>
-          
-          
+            <th>Actions</th></tr>
         </thead>
         <tbody>
           <tr>
@@ -60,13 +53,19 @@ const TodoList2 = () => {
                     updatedNewTodos[i] = e.target.value;
                     setNewTodos(updatedNewTodos);
                   }}
-                  placeholder={`Enter new todo ${i + 1}`}
-                  
+                  placeholder={`Enter  ${i + 1}`}                 
                 />
               </td>
             ))}
             <td>
-            
+
+            <div className="button-container">
+              <button className="button-styled" onClick={addTodo}>
+              <span>+</span>
+              <label htmlFor="">Agregar</label>
+              </button>
+            </div>
+
             </td>
           </tr>
           {todos.map((row, rowIndex) => (

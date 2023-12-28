@@ -65,9 +65,9 @@ const MyComponent = () => {
         </nav>
       </div>
       {/* Container Main start */}
-      <div className="height-100 bg-light">
+      <div className="">
         <h4>Main Components</h4>
-        
+        <TodoList2/>
       </div>
       </body>
     </>

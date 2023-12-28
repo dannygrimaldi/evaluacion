@@ -11,9 +11,14 @@
   }
 
 
-
+  .button-container {
+    position: absolute;
+    top: 130px;
+    left: 130px;
+  }
 .button-styled {
     position: relative;
+    z-index: 2;
     top: 130px;
     left: 130px;
     padding: 0 17px;
@@ -92,15 +97,13 @@
 
 
 
-  
-
-  .todo-table {
-    border-collapse: collapse;
+  .todo-table  {
+    
     width: 100%;
   }
   
   .todo-table th, 
-  .todo-table td {
+  .todo-table td{
     border: 1px solid #ccc;
     padding: 8px;
     overflow: hidden;
