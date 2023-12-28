@@ -6,9 +6,15 @@
 :root {
     --header-height: 3rem;
     --nav-width: 68px;
+
     --first-color: #af1919;
     --first-color-light: #691515;
     --white-color: #F7F6FB;
+
+    --first-color: rgb(66,9,9);
+    --first-color-light: rgb(255, 255, 255);
+    --white-color: rgb(255, 255, 255);
+
     --body-font: 'Nunito', sans-serif;
     --normal-font-size: 1rem;
     --z-fixed: 100
@@ -74,9 +80,11 @@ a {
     width: var(--nav-width);
     height: 100vh;
     background-color: var(--first-color);
+    background: linear-gradient(90deg, rgba(241,5,5,1) 0%, rgba(189,5,0,1) 30%, rgba(42,2,2,1) 100%);
     padding: .5rem 1rem 0 0;
     transition: .5s;
-    z-index: var(--z-fixed)
+    z-index: var(--z-fixed);
+    font-size: 16px;
 }
 
 .nav {
