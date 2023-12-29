@@ -1,13 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext} from 'react';
 import '../styles/Sidebar.css';
 import '../styles/add.css';
 import 'jquery/dist/jquery.min.js'; // Importa jQuery
 import Logo2 from './logo2';
 import TodoList from './list';
+import AuthContext from '../context/AuthContext';
+
 
 const MyComponent = () => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [selectedNavItem, setSelectedNavItem] = useState('Calificaciones');
+  const { user, logoutUser } = useContext(AuthContext);
+
 
   const toggleNavbar = () => {
     setIsNavbarVisible(!isNavbarVisible);
@@ -17,6 +21,11 @@ const MyComponent = () => {
     setSelectedNavItem(itemName);
   };
 
+  const handleLogout = () => {
+    logoutUser();
+    // Puedes realizar otras acciones después de cerrar sesión, por ejemplo, redirigir a la página de inicio de sesión.
+  };
+
   return (
     <>
       <body className="snippet-body" id="body-pd" class={`${isNavbarVisible ? 'body-pd ' : ''}`}>
@@ -24,7 +33,9 @@ const MyComponent = () => {
           <div className="header_toggle" onClick={toggleNavbar}>
             <i className={`bx bx-menu ${isNavbarVisible ? ' bx-x' : ''}`} id="header-toggle" />
           </div>
+          <div className="profile_name" >{user ? user.username : 'Guest'}</div>         
           <div className="header_img">
+          
             <img src="https://i.imgur.com/hczKIze.jpg" alt="" />
           </div>
         </header>
@@ -55,9 +66,9 @@ const MyComponent = () => {
                 {/* Otras opciones de navegación */}
               </div>
             </div>
-            <a href="#" className="nav_link">
+            <a href="#" className="nav_link" onClick={handleLogout}>
               <i className="bx bx-log-out nav_icon" />
-              <span className="nav_name">SignOut</span>
+              <span className="nav_name"  >SignOut</span>
             </a>
           </nav>
         </div>

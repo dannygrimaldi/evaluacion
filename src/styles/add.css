@@ -115,3 +115,7 @@
     width: 100%;
     box-sizing: border-box;
   }
+
+  .profile_name {
+    text-align: left;
+  }
