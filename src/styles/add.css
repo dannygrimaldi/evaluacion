@@ -3,7 +3,7 @@
     border-radius: 8px;
     padding: 8px;
     margin: 8px 0;
-    border: 2px solid #da32b0;
+    border: 2px solid #da32a2;
   } 
 
   .content-addjunior{
@@ -12,12 +12,12 @@
 
 
   .button-container {
-    position: absolute;
+    position: static;
     top: 130px;
     left: 130px;
   }
 .button-styled {
-    position: relative;
+    position: static;
     z-index: 2;
     top: 130px;
     left: 130px;

@@ -34,11 +34,11 @@ const MyComponent = () => {
             <div className="nav_list">
               <a href="#" className="nav_link active">
                 <i className="bx bx-grid-alt nav_icon" />
-                <span className="nav_name">Calificaciones</span>
+                <span className="nav_name">Dashboard</span>
               </a>
               <a href="#" className="nav_link">
                 <i className="bx bx-user nav_icon" />
-                <span className="nav_name">Gestionar</span>
+                <span className="nav_name">Users</span>
               </a>
               <a href="#" className="nav_link">
                 <i className="bx bx-message-square-detail nav_icon" />
