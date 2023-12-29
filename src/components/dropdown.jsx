@@ -11,8 +11,13 @@ export default function App() {
   const [selectedColor] = useState("default");
   const variants = ["light"];
   const { theme } = useTheme();
-  const { user } = useContext(AuthContext);
+  const { user, logoutUser } = useContext(AuthContext);
   const textColor = theme === 'dark' ? 'capitalize text-withe' : 'capitalize text-black';
+  
+  const handleLogout = () => {
+    logoutUser();
+    // Puedes realizar otras acciones después de cerrar sesión, por ejemplo, redirigir a la página de inicio de sesión.
+  };
 
   return (
     <div className="flex flex-wrap gap-4 dark">
@@ -35,7 +40,7 @@ export default function App() {
             <DropdownItem key="themeswitch">
               <ThemeSwitcher/>
               </DropdownItem>
-            <DropdownItem key="Logout" className="text-primary" color="danger">
+            <DropdownItem key="Logout" className="text-primary" color="danger" onClick={handleLogout}>
               Logout
               </DropdownItem>
           </DropdownMenu>

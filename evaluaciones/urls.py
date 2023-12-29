@@ -3,7 +3,7 @@ from django.urls import path, re_path, include
 from django.views.generic import TemplateView
 from django.conf.urls.static import static
 from django.conf import settings
-from evacore.views import MyTokenObtainPairView
+from evacore.views import MyTokenObtainPairView, get_profile,SelectItemsDDA
 
 from rest_framework_simplejwt.views import (
     TokenRefreshView,
@@ -14,7 +14,7 @@ from rest_framework_simplejwt.views import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('profile/', views.get_profile),
+    path('profile/', get_profile),
     path('token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('Selectdatatdd', SelectItemsDDA.as_view()),

@@ -71,8 +71,8 @@ main {
     border-radius: 5px;
     box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
     overflow: hidden; 
-    background: linear-gradient(180deg, rgba(65,4,119,1) 0%, rgba(22,147,198,1) 58%, rgba(255,255,255,0.1407913507199755) 82%);
-    color:#ffffff;
+/*     background: linear-gradient(180deg, rgba(65,4,119,1) 0%, rgba(22,147,198,1) 58%, rgba(255,255,255,0.1407913507199755) 82%);
+ */    color:#ffffff;
 }
 
 /* Nav Buttons  */
