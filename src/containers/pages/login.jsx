@@ -1,10 +1,26 @@
 import Footer from '../../components/footer';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Header from '../../components/header';
 import Layout from '../../hocs/layouts/Layout';
+import AuthContext from '../../context/AuthContext';
+import { useTheme } from 'next-themes';
 
 
-function Login() {
+
+/* function Login() {
+  const [activeForm, setActiveForm] = useState('login');
+
+  const switchToLogin = () => {
+    setActiveForm('login');
+  };
+
+  const switchToRegister = () => {
+    setActiveForm('register');
+  }; */
+
+
+  const Login = () => {
+
   const [activeForm, setActiveForm] = useState('login');
 
   const switchToLogin = () => {
@@ -14,6 +30,22 @@ function Login() {
   const switchToRegister = () => {
     setActiveForm('register');
   };
+    const { theme } = useTheme();
+    const { loginUser } = useContext(AuthContext);
+    const [error, setError] = useState(null);
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        
+        // Resetear el mensaje de error en cada intento de inicio de sesión
+        setError(null);
+
+        try {
+            await loginUser(e);
+        } catch (error) {
+            setError('Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.');
+        }
+    };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -29,14 +61,16 @@ function Login() {
               </div>
               <div className="form-group">
                 {activeForm === 'login' && (
-                  <form action="" id="loginform">
+                  <form action="" id="loginform" onSubmit={handleLogin}>
                     <label htmlFor="username">username</label>
                     <input type="text" id="username" />
                     <label htmlFor="password">password</label>
-                    <input type="text" id="password" />
+                    <input type="password" id="password" />
                     <input type="submit" value="Submit" className="submit" />
                   </form>
-                )}
+
+)}
+{error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
                 {activeForm === 'register' && (
                   <form action="" id="registerform">
                     <label htmlFor="fullname">fullname</label>
@@ -50,13 +84,16 @@ function Login() {
                     <input type="submit" value="Submit" className="submit" />
                   </form>
                 )}
+
               </div>
               <div id="forgot">
                 <a href="">forgot password?</a>
               </div>
+
             </div>
           </div>
         </div>
+
       </main>
       </Layout>
       <Footer />

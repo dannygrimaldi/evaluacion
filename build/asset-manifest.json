@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.4dde5191.css",
-    "main.js": "/static/js/main.6e2161aa.js",
-    "static/media/logoHSBC.svg": "/static/media/logoHSBC.96d65f5dd5279a15a4658a3a325929f2.svg",
+    "main.css": "/static/css/main.2797adc7.css",
+    "main.js": "/static/js/main.fa795785.js",
+    "static/media/boxicons.svg": "/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
+    "static/media/boxicons.eot": "/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
+    "static/media/boxicons.woff": "/static/media/boxicons.d12afc36557395143e4b.woff",
+    "static/media/boxicons.ttf": "/static/media/boxicons.db9ddb1898dbd76badca.ttf",
+    "static/media/boxicons.woff2": "/static/media/boxicons.df635aaf04cd75132f62.woff2",
     "index.html": "/index.html",
-    "main.4dde5191.css.map": "/static/css/main.4dde5191.css.map",
-    "main.6e2161aa.js.map": "/static/js/main.6e2161aa.js.map"
+    "main.2797adc7.css.map": "/static/css/main.2797adc7.css.map",
+    "main.fa795785.js.map": "/static/js/main.fa795785.js.map"
   },
   "entrypoints": [
-    "static/css/main.4dde5191.css",
-    "static/js/main.6e2161aa.js"
+    "static/css/main.2797adc7.css",
+    "static/js/main.fa795785.js"
   ]
 }

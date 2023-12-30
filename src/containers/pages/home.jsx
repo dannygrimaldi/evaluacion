@@ -1,13 +1,37 @@
+import React, { useState, useEffect, useContext } from 'react'
 import Header from '../../components/header.js';
 import Footer from '../../components/footer.js';
 import Layout from '../../hocs/layouts/Layout.js';
-import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Input, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar} from "@nextui-org/react";
 import {AcmeLogo} from "./AcmeLogo.jsx";
 import {SearchIcon} from "./SearchIcon.jsx";
 import {Card, CardFooter, Image, Button} from "@nextui-org/react";
+import AuthContext from '../../context/AuthContext';
 
-function Home() {
+const Home = () => {
+  const { authTokens, logoutUser } = useContext(AuthContext);
+  let [profile, setProfile] = useState([])
+
+  useEffect(() => {
+      getProfile()
+  },[])
+
+  const getProfile = async() => {
+      let response = await fetch('http://127.0.0.1:8000/api/profile', {
+      method: 'GET',
+      headers:{
+          'Content-Type': 'application/json',
+          'Authorization':'Bearer ' + String(authTokens.access)
+      }
+      })
+      let data = await response.json()
+      console.log(data)
+      if(response.status === 200){
+          setProfile(data)
+      } else if(response.statusText === 'Unauthorized'){
+          logoutUser()
+      }
+  }
     return (
         <div className="flex flex-col min-h-screen">
             <Header />
