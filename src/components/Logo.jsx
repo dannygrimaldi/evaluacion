@@ -14,7 +14,7 @@ function Logo(props) {
 
   return (
     
-<a onClick={handleSmallButtonClick}>
+<a href="/" onClick={handleSmallButtonClick}>
     <svg
       version="1.1"
       id="LogoHSBC"
