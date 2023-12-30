@@ -31,7 +31,7 @@ export default function App() {
               className={textColor}
             ><UserIcon className="w-4 mr-1" />
               {user ? user.username : 'Guest'}
-              {user ? user.username : 'Guest'}
+
             </Button>
           </DropdownTrigger>
           <DropdownMenu
