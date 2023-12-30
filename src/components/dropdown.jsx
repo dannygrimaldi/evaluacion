@@ -1,12 +1,10 @@
 import React, { useState, useContext } from "react";
-import React, { useState, useContext } from "react";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
 import { ThemeSwitcher } from '../components/ThemeSwitcher';
 import { UserIcon } from "./UserIcon";
 import { useTheme } from 'next-themes';
 import AuthContext from '../context/AuthContext';
 
-import AuthContext from '../context/AuthContext';
 
 
 
