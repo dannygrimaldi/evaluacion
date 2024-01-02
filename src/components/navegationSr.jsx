@@ -1,13 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../styles/Sidebar.css';
-import '../styles/add.css';
-import 'jquery/dist/jquery.min.js'; // Importa jQuery
+//import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
+import { ThemeSwitcher } from '../components/ThemeSwitcher';
 import Logo2 from './logo2';
 import TodoList from './list';
-
+import { useTheme } from 'next-themes';
+import '../styles/Sidebar.css';
+import '../styles/add.css';
+import 'jquery/dist/jquery.min.js';
+import Dropdown from './dropdown'
 const MyComponent = () => {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
   const [selectedNavItem, setSelectedNavItem] = useState('Calificaciones');
+  const { theme } = useTheme();
 
   const toggleNavbar = () => {
     setIsNavbarVisible(!isNavbarVisible);
@@ -19,15 +23,15 @@ const MyComponent = () => {
 
   return (
     <>
-      <body className="snippet-body" id="body-pd" class={`${isNavbarVisible ? 'body-pd ' : ''}`}>
-        <header className={`header ${isNavbarVisible ? 'body-pd' : ''}`} id="header">
-          <div className="header_toggle" onClick={toggleNavbar}>
-            <i className={`bx bx-menu ${isNavbarVisible ? ' bx-x' : ''}`} id="header-toggle" />
-          </div>
-          <div className="header_img">
-            <img src="https://i.imgur.com/hczKIze.jpg" alt="" />
-          </div>
-        </header>
+      <body className={`snippet-body ${theme}`} id="body-pd" class={`${isNavbarVisible ? 'body-pd ' : ''}`}>
+                <header className={`header ${isNavbarVisible ? 'body-pd' : ''} ${theme}`} id="header">
+                    <div className="header_toggle" onClick={toggleNavbar}>
+                        <i className={`bx bx-menu ${isNavbarVisible ? ' bx-x' : ''}`} id="header-toggle" />
+                    </div>
+                    <div className="header_img">
+                        <img src="https://i.imgur.com/hczKIze.jpg" alt="" />
+                    </div>
+                </header>
         <div className={`l-navbar ${isNavbarVisible ? 'show' : ''}`} id="nav-bar">
           <nav className="nav">
             <div>
@@ -59,6 +63,7 @@ const MyComponent = () => {
               <i className="bx bx-log-out nav_icon" />
               <span className="nav_name">SignOut</span>
             </a>
+            <Dropdown/>
           </nav>
         </div>
         {/* Container Main start */}

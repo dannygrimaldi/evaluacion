@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import '../styles/add.css';
+import { useTheme } from 'next-themes';
+
 
 const TodoList = () => {
+
+  
+  const { theme } = useTheme();
   const [todos, setTodos] = useState([]);
   const [newTodos, setNewTodos] = useState(['', '', '']);
   const [selectedTodo, setSelectedTodo] = useState(null);
@@ -27,10 +32,12 @@ const TodoList = () => {
     }, 500);
   };
 
+  
+
   return (
     <div>
       <h2>AGREGAR ASESOR</h2>
-      <table className="todo-table">
+      <table className={`todo-table ${theme}`}>
         <thead>
           <tr>
             <th>Nombre del asesor</th>

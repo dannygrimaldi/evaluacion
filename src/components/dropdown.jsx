@@ -43,7 +43,8 @@ export default function App() {
               <ThemeSwitcher/>
               </DropdownItem>
             <DropdownItem key="Logout" className="text-primary" color="danger" onClick={handleLogout}>
-              Logout
+            <i className="bx bx-log-out nav_icon" /> 
+            <span >Logout</span>
               </DropdownItem>
           </DropdownMenu>
         </Dropdown>
