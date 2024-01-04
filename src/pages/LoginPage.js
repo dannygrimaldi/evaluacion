@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import AuthContext from '../context/AuthContext'
 import { Button } from "@nextui-org/react";
-
+import Layout from '../hocs/layouts/Layout';
 import '../styles/index.css'
 
 
@@ -12,7 +12,7 @@ const LoginPage = () => {
 
     return (
         <div className="flex flex-col min-h-screen">
-           
+            <Layout>
             <main className="flex-grow overflow-auto">
                 <div className="relative max-w-7xl mx-auto z-10">
                     <div className="container">
@@ -33,7 +33,7 @@ const LoginPage = () => {
                     </div>
                 </div>
             </main>
-        
+            </Layout>
         </div>
     )
 }

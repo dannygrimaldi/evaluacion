@@ -1,0 +1,138 @@
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+  --body-font: 'Nunito', sans-serif;
+  --normal-font-size: 1rem;
+  --z-fixed: 100;
+  --dark-theme: #1b1b1b;
+  --light-theme: #f7f6fb;
+  --first-color: #af1919;
+  --first-color-light: #691515;
+  --white-color: var(--light-theme);
+  --black-color: var(--dark-theme);
+  --table-border-color: #fa0101;
+  --table-cell-padding: 8px;
+}
+
+.todo-input {
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px 0;
+    border: 2px solid var(--first-color);
+}
+
+.content-addjunior {
+    align-items: end;
+}
+
+.button-container {
+    position: static;
+    top: 130px;
+    left: 130px;
+}
+
+.button-styled {
+    position: fixed;
+    z-index: 2;
+    top: 230px;
+    left: 1200px;
+    padding: 0 17px;
+    transform: translateX(-50%);
+    height: 50px;
+    border-radius: 100px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--first-color);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.button-styled:hover:before,
+.button-styled:hover:after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+.button-styled:hover label {
+    width: 75px;
+    opacity: 0.8;
+    margin-left: 8px;
+}
+
+.button-styled:before,
+.button-styled:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 100px;
+    background-color: var(--first-color-light);
+    opacity: 0;
+    transition: all 0.4s ease;
+    transition-delay: 0.1s;
+    z-index: 0;
+}
+
+.button-styled:after {
+    transition-delay: 0.3s;
+}
+
+.button-styled span {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.button-styled label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 0;
+    white-space: nowrap;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 1;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: normal;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.todo-table {
+    width: 100%;
+    background-color: var(--white-color);
+
+}
+.todo-table.light {
+  background-color: #ffffff; /* Estilos para el tema claro */
+}
+
+.todo-table.dark {
+  background-color: #1b1b1b; /* Estilos para el tema oscuro */
+}
+
+
+.todo-table th,
+.todo-table td {
+    border: 1px solid var(--table-border-color);
+    padding: var(--table-cell-padding);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.todo-table input {
+    width: 100%;
+    box-sizing: border-box;
+}
